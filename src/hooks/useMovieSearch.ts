@@ -26,6 +26,7 @@ export const useMovieSearch = (query: string) => {
           throw new Error('Failed to fetch movies');
         }
         const data: MovieSearchResponse = await res.json();
+        // console.log('[TMDb results]', data);
         setMovies(data.results);
       } catch (error) {
         setError((error as Error).message || 'Failed to fetch movies');
