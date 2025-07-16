@@ -15,7 +15,7 @@ const MovieCard: React.FC<MoveCardProps> = ({ movie }) => {
     : 'N/A';
 
   return (
-    <div className="bg-white shadow-md rounded overflow-hidden">
+    <div className="bg-white shadow-md rounded overflow-hidden transform hover:scale-105 transition duration-300">
       <img
         src={posterUrl}
         alt={movie.title}

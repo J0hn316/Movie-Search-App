@@ -13,14 +13,16 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 px-4 py-8">
+    <div className="min-h-screen bg-gray-300 px-4 py-8">
       <h1 className="text-3xl font-bold text-center text-blue-600 mb-6">
         🎥 Movie Search App
       </h1>
 
       <SearchBar onSearch={handleSearch} />
       {loading && (
-        <p className="text-center text-gray-600 text-lg">Loading movies...</p>
+        <p className="text-center my-10 text-gray-600 animate-pulse">
+          Loading movies...
+        </p>
       )}
 
       {error && (
